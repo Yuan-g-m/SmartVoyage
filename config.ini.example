@@ -1,0 +1,17 @@
+# 复制本文件为 config.ini，并按需修改非敏感配置。
+
+[llm]
+model = deepseek-chat
+api_key = change_me
+base_url = https://api.deepseek.com
+temperature = 0.1
+
+[mysql]
+host = localhost
+port = 3309
+user = root
+password = change_me
+database = travel_rag
+
+[logger]
+log_file = logs/app.log

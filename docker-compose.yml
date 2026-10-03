@@ -1,0 +1,22 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: smartvoyage-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-change_me}
+      - MYSQL_DATABASE=travel_rag
+    command:
+      --max_connections=100
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "3309:3306"
+    volumes:
+      - ./docker/volumes/mysql:/var/lib/mysql
+      - ./docker/mysql-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-uroot", "-p${MYSQL_ROOT_PASSWORD:-change_me}"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+    restart: unless-stopped

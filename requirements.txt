@@ -1,0 +1,21 @@
+# SmartVoyage 依赖清单（对齐 EduRAG / PetKG 的精确版本管理方式）
+streamlit==1.58.0
+fastapi==0.115.12
+uvicorn==0.41.0
+
+langchain==1.4.3
+langchain-classic==1.0.1
+langchain-core==1.6.6
+langchain-openai==1.1.10
+langchain-mcp-adapters==0.3.2
+langgraph==1.2.12
+
+mcp==1.30.0
+sse-starlette==2.4.1
+python-a2a==0.5.10
+
+mysql-connector-python==9.4.0
+requests==2.32.5
+python-dotenv==1.2.2
+pytz==2025.2
+schedule==1.2.2

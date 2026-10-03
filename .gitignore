@@ -1,0 +1,32 @@
+# ---- 环境与密钥 ----
+.env
+.env.local
+.env.*.local
+config.ini
+
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- 日志与运行时 ----
+logs/
+*.log
+runtime/
+.streamlit/
+
+# ---- 数据库卷 ----
+docker/volumes/
+
+# ---- IDE / 系统 ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
